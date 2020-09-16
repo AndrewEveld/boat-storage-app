@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class StoragePoint {
   Coordinates _pointPosition;
   List<String> _storageList;
@@ -24,6 +22,10 @@ class StoragePoint {
 
   void addToList(String item) {
     _storageList.add(item);
+  }
+
+  void setLocation(int newX, int newY) {
+    _pointPosition = Coordinates(newX, newY);
   }
 
   String removeFromList(int index) {
